@@ -1,0 +1,1 @@
+var currPrice = $(".vs_price", "[price-id=" + price_id + "]");

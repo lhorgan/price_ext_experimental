@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <script src="scripts/jquery.js"></script>
+        <script src="scripts/underscore.js"></script>
+        <script src="scripts/sel.js"></script>
+        <script src="scripts/beach.js"></script>
+        <script src="scripts/merge2.js"></script>
+        <script src="scripts/parse.js"></script>
+        
+        <link rel="stylesheet" href="css/merge.css" />
+    </head>
+    
+    <body>
+        <div align="center">
+            <table width=80% style="text-align:center; border-style:solid">
+                <tr>
+                    <td class="title">Manatees</td><td>Price 1: <span>$33</span></td><td>Price 2: <span class="lePrice">$40</span></td>
+                </tr>
+                <tr>
+                    <td class="title">Pajamas</td><td>Price 1: <span>$35</span></td><td>Price 2: <span class="lePrice">$42</span></td>
+                </tr>
+                <tr>
+                    <td class="title">Costa Rica</td><td>Price 1: <span>$40</span></td><td>Price 2: <span class="lePrice">$45</span></td>
+                </tr>
+                <tr>
+                    <td class="title">Blankets</td><td>Price 1: <span>$98</span></td><td>Price 2: <span class="lePrice">$35</span></td>
+                </tr>
+                <tr>
+                    <td class="title">Blankets</td><td>Price 1: <span>$25</span></td><td>Price 2: <span class="lePrice">$35</span></td>
+                </tr>
+                <tr>
+                    <td class="title">Blouses</td><td>Price 1: <span>$15</span></td><td>Price 2: <span class="lePrice">$21</span></td><td>Price 3: <span>$28</span></td>
+                </tr>    
+            </table>
+        </div>
+        
+        <script>
+            /*processJSON([{"desc":[{"chain":[{"class-":"=title"}]},{"name":"temp_title"}]},{"desc":[{"super":{"ref":"temp_title"}},{"name":"vs_container","vsid":"generate","tag":true}]},{"desc":[{"chain":[{"class-":"=title"}]},{"name":"vs_title","deep":true,"ctxt":{"ref":"vs_container"},"vsid":"generate","tag":true,"cascade":true,"grab":"text,class","mandatory":true}]},{"desc":[{"chain":[{"contents-20":"+$"},{"tag-":"=span"}]},{"deep":true,"name":"vs_price","ctxt":{"ref":"vs_container"},"vsid":"generate","tag":true,"cascade":true,"grab":"text","mandatory":true}]}]);*/
+            //findBestMatch(collectiveArr, collectiveArr, 1, labels["mandatory-labels"])
+        </script>
+    </body>
+</html>

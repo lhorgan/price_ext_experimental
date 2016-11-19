@@ -1,0 +1,220 @@
+<html>
+
+<head>
+    <script src="scripts/options.js"></script>
+    <script src="scripts/jquery.js"></script>
+    <script src="scripts/bootstrap.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/options.css">
+    <title>VS Options</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse bg-faded">
+        
+        <div class="navbar-header">
+            <a class="navbar-brand" target="_blank" href="https://volunteerscience.com/">Volunteer Science</a>
+        </div>
+
+        <ul class="nav navbar-nav">
+            <li class="nav-item active" id="manageTab">
+                <a class="nav-link" href="#manage">Manage<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item" id="learnTab">
+                <a class="nav-link" href="#learn">Learn</a>
+            </li>
+            <li class="nav-item" id="surveyTab">
+                <a class="nav-link" href="#survey">Survey</a>
+            </li>
+        </ul>
+    </nav>
+    
+    <div class="container-fluid donate activeTab" style="margin:20px; display:none;">
+        <div class="row">
+            <div class="page-header">
+                <h1>
+                    Data Donation
+                    <div id="donateStats">
+                        <small>You have visited <span id="historyNum"></span> websites and collected <span id="cookieNum"></span> cookies.</small>
+                    </div>
+                </h1>
+            </div>
+            <p><em>Volunteer Science will collect your data once ever 24 hours if you donate it.  These permissions are turned off by default, and you may revoke them at any time.  If a permission is revoked, the corresponding data will no longer be collected, but existing information will not be deleted.</em></p>
+            <div class="col-sm-3">
+                <p>
+                    <label for="history">Donate your history?</label>
+                    <input type="checkbox" id="historyCheckbox" name="history" />
+                </p>
+                <p>
+                    <label for="cookies">Donate your cookies?</label>
+                    <input type="checkbox" id="cookieCheckbox" name="cookies" />
+                </p>
+                <p>
+                    <button type="button" class="btn btn-success" id="donateButton">Donate</button>
+                </p>
+            </div>
+        </div> 
+        <div class="row">
+            <div class="page-header">
+                <h1>
+                    Join our mailing list!
+                </h1>
+            </div>
+            <p>Enter your email address here.  We'll send you information about our latest experiments, and we'll let you know how you can help our researchers make exciting discoveries!</p>
+            <p><input type="text" id="emailField" name="email" placeholder="email" /></p>
+            <p><button type="button" class="btn btn-success" id="emailButton">Submit</button></p>
+        </div>
+    </div>
+    
+    <div class="container-fluid docs" style="margin:20px; display:none;">
+        <div class="row">
+            <div class="page-header">
+                <h1>
+                    Snatcher Docs
+                </h1>
+            </div>
+        </div> 
+        
+        <div class="row">
+            <div class="col-sm-12">
+                <h2>
+                    Intro
+                </h2>
+                <p>
+                    Snatcher is an extension for Google Chrome designed to help you see the effects of <em>price personalization</em>.  What is price personalization, you ask?  On the surface, it's a pretty simple concept.  We believe that some websites, like Amazon and Priceline, show different prices to different users <em>for the same product</em>.  In diplomatic terms, the prices you see are "personalized" to you.  What we as scientists wish to know is the extent to which this practice pervades e-commerce, and what factors services use to determine the prices you'll see when you visit their website.  Let's see how it works.
+                </p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-sm-12">
+                <h2>
+                    Basic Operation
+                </h2>
+                <p>When you visit one of our <em>Supported Sites</em> and perform a search, a dialog will appear.</p>
+                <p><img src="images/docs/supported_site_popup.PNG" class="img-rounded img-responsive"/></p>
+                <p>If you click <em>Close</em>, then nothing will happen and you can browse as usual.  If you click <em>Sure</em>, Snatcher will extract prices and a variety of other metadata from the page and send it to a Volunteer Science server.  Once the server gets the information, it will visit the same page and repeat your search.  While all this is happening, you'll see a spinning Volunteer Science logo that looks like this:</p>
+                <p><img src="images/docs/spinner.PNG" class="img-rounded img-responsive"/></p>
+                
+                <p>Once the server is done, it will send the prices <em>it</em> received back to you, and then it will merge than information seamlessly into your page.  Here are some things you're likely to see:</p>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="thumbnail">
+                            <p><img src="images/docs/serverMore.PNG" class="img-rounded img-responsive"/></p>
+                            <em>The server's price was higher than yours.  Lucky you!</em>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="thumbnail">
+                            <p><img src="images/docs/serverLess.PNG" class="img-rounded img-responsive"/></p>
+                            <em>The server's price was lower than yours.  What gives?!</em>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="thumbnail">
+                            <p><img src="images/docs/serverSame.PNG" class="img-rounded img-responsive"/></p>
+                            <em>The server's price was the same as yours.  Most of the time, this is what should happen.</em>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="thumbnail">
+                            <p><img src="images/docs/variantLabels.PNG" class="img-rounded img-responsive"/></p>
+                            <em>Extra variants on the same product were shown to the server, but not to you.  Here, the server saw the paperback edition of the book, while you saw the Kindle Edition.</em>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="thumbnail">
+                            <p><img src="images/docs/clientOnlyPrice.PNG" class="img-rounded img-responsive"/></p>
+                            <em>Only you saw this price.  The server didn't.</em>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="thumbnail">
+                            <p><img src="images/docs/clientHigher.PNG" class="img-rounded img-responsive"/></p>
+                            <em>The product was featured 1 place higher (ie more prominently) in your results.</em>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="thumbnail">
+                            <p><img src="images/docs/clientLower.PNG" class="img-rounded img-responsive"/></p>
+                            <em>The product was featured 1 place higher (ie more prominently) in your results.</em>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="thumbnail">
+                            <p><img src="images/docs/serverOnly.PNG" class="img-rounded img-responsive"/></p>
+                            <em>Products that only the server saw are shown semi-transparent below the main results.  Often, these products may be found by clicking through to the second or third page of results.</em>
+                        </div>
+                    </div>
+                </div>
+                
+                <p>You can enable or disable a supported site by clicking the Snatcher extension icon on the Chrome menu bar and toggling the button.  If you disable a site, the extension will ignore it entirely unless you re-enable, allowing you to use it as normal.</p>
+                <p><img src="images/docs/toggleEnable.PNG" class="img-rounded img-responsive"/></p>
+
+                <p>If you visit another page on the same site without refreshing, you will not be prompted to perform another comparsion.  If you want to run Snatcher again, click the extension icon on the fresh results page and hit the <em>Compare Prices</em> button.</p>
+                <p><img src="images/docs/anotherSearch.PNG" class="img-rounded img-responsive"/></p>
+                </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-sm-12">
+                <h2>
+                    Advanced Operation and Contributing
+                </h2>
+                <p>
+                    Snatcher is designed to make adding scrapers easy.  We will be working in the coming months to add support for popular sites.  If you'd like to help us out, you can build your own scraper using our sandbox.  Building a crude scraper with the sandbox doesn't require any coding experience; all you have to do is point and click.  If you're a developer, the automated tool may be a good jumping-off point.  In most cases, it's easy to refine the auto-generated scraper such that it works nearly perfectly.  Let's take a look.
+                </p>
+                
+                <p>
+                    <strong>IMPORTANT NOTE: THE SANDBOX IS A WORK IN PROGRESS AND MAY NOT WORK CORRECTLY.  Until the gallery is complete, you may submit your scraper by saving it, going to the Log tab, and copying the text into an email to HORGAN.L@HUSKY.NEU.EDU.  You may also submit bug reports and other grievances to that address.</strong>
+                </p>
+
+                <p>To get started, visit the site you'd like to build a parser for, do a search, and open Chrome's devtools by pressing CTRL+SHIFT+J.  Click the Volunteer Science tab.  In this tutorial, we're going to visit Staples.com and search for printers.</p>
+                <p><img src="images/docs/sandboxOpened.PNG" class="img-rounded img-responsive"/></p>
+                
+                <p>For this site, there are four types of elements that I want to select: product titles, product prices, product images, and product SKUs.  The titles will server as my <em>anchor group</em> because there is only one title per item, which means Snatcher shouldn't have too much trouble picking them out.  Picking a good anchor group will make the tool work better.  Note that the price group must be called <em>price</em>.  The anchor group doesn't have to be called <em>anchor</em>, but it's a good idea to use that name anyway.  In the image below, I've added the four groups by clicking the small black plus button next to each input and typing their names.</p>
+                <p><img src="images/docs/elementGroups.PNG" class="img-rounded img-responsive"/></p>
+                
+                <p>When you click <em>Submit</em>, you will be prompted to SELECT every element of every group you identified, one element at a time.  To make this easier, Snatcher removes all but 15 listings from the page.  It is important that you accurately select everything you've promised to, or else Snatcher is more likely to get confused and die.  All you have to do to select an element is mouse over it and click.  Note that when you leave the sanbox by switiching tabs or closing DevTools all together, this click and select functionality will disappear, allowing you to use the page as before.  Here, Snatcher has prompted me to select all anchor elements, and I have complied.</p>
+                <p><img src="images/docs/anchorPrompt.PNG" class="img-rounded img-responsive"/></p>
+                <p><img src="images/docs/selectAnchors.PNG" class="img-rounded img-responsive"/></p>
+                
+                <p>Once you've finished selecting the last element group and you submit it, Snatcher will attemp to build a scraper for it.  Give it some time; it shouldn't take too long.  It will log its progress and let you know if something goes wrong.</p>
+                <p><img src="images/docs/processingSelection.PNG" class="img-rounded img-responsive"/></p>
+                <p><img src="images/docs/processingLog.PNG" class="img-rounded img-responsive"/></p>
+                
+                <p>If everything goes well, the finished scraper will appear in the builder tab.  If you're not a developer, you don't have to worry too much about that scary looking graphic, but it really isn't as bad as it looks.  All of its components are explained in this PDF (which doesn't exist yet, but will soon!).  Using the four buttons, which are highlighted in yellow at the the top, you can save your scraper, load a saved scraper, merge two scrapers, and run your scraper to see what it extracts from the page.  Saving and Opening are pretty self-explanatory, but we'll go over Merging and Running in more detail.</p>
+                <p><img src="images/docs/generatedScraper.PNG" class="img-rounded img-responsive"/></p>
+                
+                <p>The auto-generated scrapers have a tendency to overfit the data.  In the printer example, for instance, Snatcher saw that every produt title contained the word <em>printer</em>, so it decided all product listings on Staples.com probably use this word.  To fix that, save the printer scraper, open a new tab (or restart DevTools), and run a new search for something else.  Repeat all the previous steps and generate a new scraper.  Save that scraper and then click the U-shaped magnet.  Select two or more scrapers you'd like to merge and then click the checkbox button.  The merged scraper should appear immediately.  Here, I ran a search for office chairs.  When I merged the office chair scraper with the printer selector, Snatcher took what was common between them and left out the rest, thereby solving the overfit problem.</p>
+                <p><img src="images/docs/mergeSelections.PNG" class="img-rounded img-responsive"/></p>
+                <p><img src="images/docs/overfit.PNG" class="img-rounded img-responsive"/></p>
+                <p><img src="images/docs/mergedSelector.PNG" class="img-rounded img-responsive"/></p>
+                
+                <p>To see if your selector works, click the green <em>Run</em> button.  The scraped information will be written to the Log tab as a stringified JSON array.  Prettier printing is under development.  You can clear the log by clicking the round X button.  Note that when you <em>Save</em> a scraper, the stringified scraper is also printed to the log tab.  You may submit any such scrapers to HORGAN.L@HUSKY.NEU.EDU for review.</p>
+                <p><img src="images/docs/loggedData.PNG" class="img-rounded img-responsive"/></p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container-fluid survey" style="margin:20px; display:none;">
+        <!--<iframe src='https://volunteerscience.com/amt/test/ea8ba18bbe50aeabb127/' style='width:100%; height:80%;'></iframe>-->
+    </div>
+    
+</body>
+
+</html>

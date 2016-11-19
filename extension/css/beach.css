@@ -1,0 +1,191 @@
+body, input, select {
+    font-family: 'Roboto', sans-serif;
+    font-size:14px;
+}
+
+.label {
+    transform: rotate(-90deg);
+    transform-origin: left top 0;
+    float: left;
+    display: inline-block;
+    padding: 5px;
+    background-color: darkblue;
+    color: white;
+}
+
+.link {
+    display:flex;
+    flex-direction: column;
+    width:200px;
+    border-style: solid;
+    margin: 5px;
+}
+
+.linkHeader {
+    width:100%;
+    font-size:15px;
+    background-color:cornflowerblue;
+    color: white;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-align: center;
+}
+
+.linkHeaderTitle {
+    position:relative;
+    left: auto;
+    right: auto;
+}
+
+.linkHeaderButton {
+    cursor: pointer;
+}
+
+.linkHeaderClose {
+    float: right;
+}
+
+
+.float-left {
+    float: left;
+}
+
+.linkHeaderAdd {
+    /*float: left;*/
+}
+
+.linkBody {
+    text-align: center;
+    overflow: auto;
+}
+
+.typeSelect {
+    /*position: relative;
+    top: 30px;*/
+    margin: 5px;
+}
+
+.addChain {
+    margin: 5px;
+    cursor: pointer;
+    display: block;
+}
+
+.descInfo {
+    font-family: 'Roboto Mono', monospace;
+    display:flex;
+    flex-direction: column;
+    border-style: dotted;
+    border-width:1px;
+    margin: 5px;
+    padding: 5px;
+    width: 
+}
+
+.margin {
+    margin: 5px;
+}
+
+.container {
+    display:inline-flex;
+    border-style: solid;
+    border-width: 1px;
+    /*flex-grow: 1;
+    max-width:100%;
+    overflow-x: scroll;*/
+    margin: 5px;
+}
+
+.type {
+    font-family: 'Roboto Mono', monospace;
+    font-size:14px;
+    width: 14px;
+    word-wrap:break-word;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.arrow {
+    cursor: pointer;
+}
+
+.menu {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.union {
+    display:flex;
+    background-color: greenyellow;
+}
+
+.diff {
+    display: flex;
+    background-color: crimson;
+    color: white;
+}
+
+.inter {
+    display: flex;
+    background-color: coral;
+}
+.sinter {
+    display: flex;
+    background-color: lightcoral;
+}
+
+.desc {
+    display: flex;
+    background-color: navy;
+    color: white;
+}
+
+.chain {
+    display: flex;
+    background-color: darkturquoise;
+}
+
+.ref {
+    display: flex;
+    background-color:firebrick;
+    color: white;
+}
+.super {
+    display: flex;
+    background-color: aquamarine;
+}
+
+.slate {
+    display: flex;
+    background-color:beige;
+}
+
+.array {
+    display:flex;
+    background-color: azure;
+}
+
+.content {
+    display: flex;
+    /*flex-direction: row;*/
+    align-items: flex-start;
+}
+
+.flex-horizontal {
+    flex-direction: row;
+}
+
+.flex-vertical {
+    flex-direction: column;
+}
+
+.holder {
+    display: inline-flex;
+    flex-direction: column;
+    border-style: solid;
+    border-width: 3px;
+    border-color: blue;
+    justify-content: flex-start;
+}

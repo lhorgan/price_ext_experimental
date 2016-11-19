@@ -1,0 +1,60 @@
+.serverPrice {
+    border-style:dotted;
+    border-width: 1px;
+    padding: 5px;
+    display: inline-block;
+}
+
+.server {
+    display: inline-block;
+}
+
+.serverPrice {
+    display: inline-block;
+    border-style: dotted;
+    border-color: black;
+    border-radius: 5px;
+    border-width: 1px;
+    padding: 2px;
+    cursor: help;
+}
+
+.clientOnly {
+    display:inline-block; 
+    border: 2px dotted #000; 
+    border-color:crimson; 
+    border-radius: 3px;
+    cursor: help;
+}
+
+.serverLess {
+    color: red;
+    cursor: help;
+}
+
+.serverMore {
+    color: limegreen;
+    cursor: help;
+}
+
+.serverSame {
+    color: blue;
+    cursor: help;
+}
+
+.serverPriceHolder {
+    display:inline-block;
+    color: chocolate;
+    border: 1px solid #F00;
+    border-radius: 3px;
+    cursor: help;
+}
+
+sup {
+    font-size: 0.6em !important;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline !important;
+    top: -0.5em;
+    cursor: help;
+}

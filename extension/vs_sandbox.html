@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <script src="scripts/vs_sandbox.js"></script>
+        <script src="scripts/jquery.js"></script>
+        <script src="scripts/bootstrap.js"></script>
+        <script src="scripts/render.js"></script>
+        <script src="scripts/parse.js"></script>
+        <script src="smart/lcss.js"></script>
+        <script src="smart/chain_merge.js"></script>
+        
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/vs_sandbox.css">
+        
+    </head>
+    
+    <body>
+        <ul class="nav nav-tabs">
+            <li class="active tab" id="generatorTab"><a href="#">Generator</a></li>
+            <li class="tab" id="builderTab"><a href="#">Builder</a></li>
+            <li class="tab" id="logTab"><a href="#">Log</a></li>
+            <li class="tab" id="galleryTab"><a href="#">Gallery</a></li>
+        </ul>
+        <div id="generator">
+            <div id="step-names">
+                <p>Name each group you plan to select.  Put the anchor group first.</p>
+                <p id="baseHolder">
+                    <input type='text' name='typeName' class='value-typeName' />
+                    <span class='remInput clickable'><span class='glyphicon glyphicon-minus-sign' aria-hidden='true'></span></span>
+                    <span class='addInput clickable'><span class='glyphicon glyphicon-plus-sign' aria-hidden='true'></span></span>
+                </p>
+                <p><button type='button' id="submit-typeNames" class='btn btn-success'>Submit</button></p>
+            </div>
+            <div id="step-selections" style="display:none">
+                <p>Select all <span id='currentType'></span>.</p>
+                <p><button type='button' id="submit-typeSelection" class='btn btn-success'>Submit</button></p>
+            </div>
+            <div id="step-analyze" style="display:none">
+                <p>Analyzing...</p>
+                <span id="message"></span>
+            </div>
+        </div>
+        <div id="builder" style="display:none">
+            <div id="actionPane">
+                <span class="glyphicon glyphicon-floppy-disk menu-icon" aria-hidden="true" title="Save"></span>
+                <span class="glyphicon glyphicon-open-file menu-icon" aria-hidden="true" title="Open"></span>
+                <span class="glyphicon glyphicon-magnet menu-icon" aria-hidden="true" title="Merge"></span>
+                <span class="glyphicon glyphicon-play menu-icon" aria-hidden="true" title="Run"></span>
+                
+                <div class="helper" id="saveHelper" style="display:none">
+                    <input type="text" placeholder="name" id="scraperName" />
+                    <span id="saveComplete" class="glyphicon glyphicon-check" aria-hidden="true" title="Save"></span>
+                </div>
+                
+                <div class="helper" id="openHelper" style="display:none">
+                    <span id="scraperListHolder"></span>
+                    <span id="openComplete" class="glyphicon glyphicon-check" aria-hidden="true" title="Open"></span>
+                </div>
+                
+                <div class="helper" id="mergeHelper" style="display:none">
+                    <span id="mergeListHolder"></span>
+                    <span id="mergeComplete" class="glyphicon glyphicon-check" aria-hidden="true" title="Merge"></span>
+                </div>
+                
+                <div id="playHelper"></div>
+            </div>
+            <iframe id="builderFrame" src="builderFrame.html" frameBorder=0></iframe>
+        </div>
+        <div id="log" style="display:none">
+            <div><span class="glyphicon glyphicon glyphicon-remove-circle" aria-hidden="true"></span></div>
+            <div id="logBody"></div>
+        </div>
+        <div id="gallery" style="display:none">
+            The gallery is a place where you can share your selectors for others in the community to use.  It is under development and will
+            be included in the next release.  In the meantime, you may submit your selector for view by Volunteer Science.  If it works, we'll
+            publish it for use by everyone!
+            <p>Scraper: <span id="scraperListGallery"></span></p>
+            <p>URL: <input type="text" id="scraperURL" name="scraperURL" /></p>
+            <p><button type='button' id="submit-scraper" class='btn btn-success'>Submit for review</button></p>
+        </div>
+    </body
+</html>

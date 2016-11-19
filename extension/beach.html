@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <script src="scripts/jquery.js"></script>
+        <script src="scripts/underscore.js"></script>
+        <script src="scripts/sel.js"></script>
+        <script src="scripts/beach.js"></script>
+        <script src="scripts/render.js"></script>
+        <script src="scripts/parse.js"></script>
+        <script src="scripts/lcss.js"></script>
+        
+        <link rel="stylesheet" href="css/beach.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        
+        <script>
+            function crude() {
+                $("#holder").empty();
+                jsonArr = JSON.parse($("#nifty").val());
+                drawJSON(jsonArr, $("#holder"));
+            }
+        </script>
+        
+    </head>
+    
+    <body>
+        <div id="suffix"></div>
+        
+        <div id="holder" class="holder"></div>
+        <!--<div class="container">
+            <div class="inter">
+                <div class="menu">
+                    <div class="arrow"><i class="material-icons">close</i></div>
+                    <div class="arrow"><i class="material-icons">arrow_back</i></div>
+                </div>
+                <div class="type">diff</div>
+            </div>
+            <div class="content">
+            </div>
+        </div>-->
+        
+        <div style="display:flex">
+            <textarea id="nifty" rows=20 cols=100></textarea>
+            <div onclick="crude()" style="cursor:pointer">CLICK ME</div>
+        </div>
+        
+        <script>
+            jsonArr = [{"desc":[{"super":{"chain":[{"class-":"[+l]vip"},{"prop-title":"[+l]click this link to access"},{"prop-title":"[+l]sneaker"},{"contents-240":"[+l]sneaker"},{"visibility-":"visible"},{"deepest-":true}]}},{"name":"vs_container","vsid":"generate"}]},{"desc":[{"chain":[{"class-":"[+l]vip"},{"prop-title":"[+l]click this link to access"},{"prop-title":"[+l]sneaker"},{"contents-240":"[+l]sneaker"},{"visibility-":"visible"},{"deepest-":true}]},{"name":"vs_name","vsid":"generate","tag":true,"ctxt":{"ref":"vs_container"},"deep":true,"grab":"text","mandatory":true,"cascade":true}]},{"desc":[{"chain":[{"class-":"[+l]bold"},{"tag-":"=SPAN"},{"contents-48":"[+l]$"},{"visibility-":"visible"},{"deepest-":true}]},{"name":"vs_price","vsid":"generate","tag":true,"ctxt":{"ref":"vs_container"},"deep":true,"grab":"text","mandatory":true,"cascade":true}]},{"desc":[{"chain":[{"prop-src":"[+l]http://thumbs.ebaystatic.com/images/"},{"prop-src":"[+l]/s-l225.jpg"},{"class-":"[+l]img"},{"prop-alt":"[+l]sneaker"},{"tag-":"=IMG"},{"visibility-":"visible"},{"deepest-":true}]},{"name":"vs_image","vsid":"generate","tag":true,"ctxt":{"ref":"vs_container"},"deep":true,"grab":"src","mandatory":true,"cascade":true}]},{"desc":[{"chain":[{"class-":"[+l]iconetrs2badge"},{"prop-src":"[+l]http://ir.ebaystatic.com/pictures/aw/pics/s_1x2.gif"},{"prop-alt":"[+l]get fast shipping and excellent service when you buy from ebay top-rated sellers"},{"tag-":"=IMG"},{"visibility-":"visible"},{"deepest-":true}]},{"name":"vs_trusted","vsid":"generate","tag":true,"ctxt":{"ref":"vs_container"},"deep":true,"grab":"src","mandatory":false,"cascade":true}]}];
+            
+            drawJSON(jsonArr, $("#holder"));
+        </script>
+
+    </body>
+</html>

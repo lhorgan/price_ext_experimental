@@ -1,0 +1,238 @@
+<html>
+
+<head>
+    <script src="scripts/jquery.js"></script>
+    <script src="scripts/underscore.js"></script>
+    <script src="smart/smart_ui.js"></script>
+    <script src="smart/smart_sel.js"></script>
+    <script src="smart/smart_sel_2.js"></script>
+    <script src="smart/dictionary.js"></script>
+    <script src="smart/dict.js"></script>
+    <script src="smart/lcss.js"></script>
+    <!--<script src="scripts/lcss.js"></script>-->
+    <script src="scripts/sel.js"></script>
+    <script src="scripts/beach.js"></script>
+    <script src="scripts/parse.js"></script>
+    <link rel="stylesheet" href="css/smart_ui.css" />
+    
+    <style>
+        .FCS5SWB-d-S {
+            border-style: solid;
+            border-width: 1px;
+            margin: 5px;
+            padding: 10px;
+        }
+    </style>
+</head>
+    
+<body>
+    <!--<span class="FCS5SWB-d-zb">$513987</span>-->
+    
+    <a href="https://www.google.com/flights/#search;f=BOS;t=JFK,EWR,LGA;d=2016-08-04;r=2016-08-09" class="FCS5SWB-Lb-a FCS5SWB-Lb-p FCS5SWB-Lb-t FCS5SWB-Lb-u"><div class="FCS5SWB-Lb-s"><div class="FCS5SWB-Lb-x">$127</div><div class="FCS5SWB-Lb-y">round trip</div></div><div class="FCS5SWB-Lb-v FCS5SWB-Lb-o"><span class="FCS5SWB-Lb-B">Date tip:</span> <span class="FCS5SWB-Lb-z">Save $24 if you return on Tue, Aug 9</span><div class="FCS5SWB-Lb-w">Return 1 day later</div></div><div class="FCS5SWB-Lb-n"></div></a>
+    
+    <div class="FCS5SWB-d-W FCS5SWB-d-Kb FCS5SWB-d-S FCS5SWB-d-Y FCS5SWB-d-cc" iti="2"><span class="FCS5SWB-d-X FCS5SWB-d-s FCS5SWB-d-N" elm="il"><div class="FCS5SWB-d-Ab"><div elm="p"><div class="FCS5SWB-d-zb">$151</div><!--<div class="FCS5SWB-d-zb">$154</div>--><div class="FCS5SWB-d-Bb">round trip</div></div></div><div class="FCS5SWB-d-bc"><div class="FCS5SWB-d-ic FCS5SWB-d-mc" tooltip="Wi-Fi available on portions of your flight."></div><img class="FCS5SWB-d-i" src="https://www.gstatic.com/flights/airline_logos/35px/B6.png"><div class="FCS5SWB-d-ac"><span class="FCS5SWB-Tb-o">6 similar flightsg</span></div>
+    <div class="FCS5SWB-d-j nitpick"><span>JetBlue</span></div>
+    </div>
+    <div class="FCS5SWB-d-Ib">
+        <div class="FCS5SWB-d-D">from 1h 07m</div>
+        <div class="FCS5SWB-d-Hb">from BOS</div>
+        <!-- DELETE MAYBE --><!--<div class="FCS5SWB-d-ac"><span class="FCS5SWB-Tb-o">2 similar flights</span></div>--><!-- DELETE MAYBE -->
+    </div>
+    <div class="FCS5SWB-d-Tb">
+        <!--<div class="FCS5SWB-d-Rb">Nonstop baby</div>-->
+    </div>
+    <div class="FCS5SWB-Tb-n">
+        <div class="FCS5SWB-Tb-d"></div>
+    </div>
+    </span>
+    </div>
+    
+    <!--<div class="vs_test_suite">
+        <span><div class="nicole" id="unrequited" lat="10" long="nifty">Pristin</div></span>
+        <div class="nicole" id="unrequited" lat="20" long="nifty">Pristin</div>
+        <div class="nicole" id="unrequited" lat="30" long="cool">Going</div>
+        <div class="nicole" id="unrequited" lat="40" long="cool">Going</div>
+        <div class="nicole" id="unrequited" lat="50" long="ni" grp="uin">Going</div>
+        <div class="nicole" id="unrequited" lat="60" long="ni" grp="uin">Going</div>
+    </div>-->
+    
+    <div class="orbitz">
+        <!--<div class="price">$113<div class="fakelink actualPrice">$213</div></div>
+        <div class="price"><div class="fakelink actualPrice">$513</div></div>
+        <div class="price"><div class="fakelink actualPrice">$713</div></div>
+        <div class="price"><div class="fakelink actualPrice">$813</div></div>-->
+        
+        <div class="price"><div class="fakelink actualPrice">$213</div></div>
+        <div class="price"><div class="fakelink actualPrice">$513</div></div>
+        <div class="price"><div class="fakelink actualPrice">$713</div></div>
+        <div class="price"><div class="fakelink actualPrice">$813</div></div>
+    </div>
+    
+    <div class="nicole"><span id="80">Pristin</span></div>
+    
+    <div class="FCS5SWB-d-W FCS5SWB-d-Kb FCS5SWB-d-S" iti="60">
+        <div class="FCS5SWB-d-Ab">
+            <div elm="p">
+                <div class="FCS5SWB-d-zb">$286</div>
+                <div class="FCS5SWB-d-Bb">round trip</div>
+            </div>
+        </div>
+        <div class="FCS5SWB-d-bc">
+            <div class="FCS5SWB-d-ic FCS5SWB-d-jc" tooltip="Wi-Fi available on your entire flight."></div><img class="FCS5SWB-d-i" src="https://www.gstatic.com/flights/airline_logos/35px/UA.png">
+            <div class="FCS5SWB-d-ac"><span tooltip="9:40 pm on Thursday, August 4, 2016">9:40 pm</span> – <span tooltip="11:04 pm on Thursday, August 4, 2016">11:04 pm</span></div>
+            <div class="FCS5SWB-d-j nitpick"><span>Virgin</span></div>
+        </div>
+        <div class="FCS5SWB-d-Ib">
+            <div class="FCS5SWB-d-D">1h 24m</div>
+            <div class="FCS5SWB-d-Hb">BOS-EWR</div>
+            <!-- DELETE MAYBE --><!--<div class="FCS5SWB-d-ac"><span class="FCS5SWB-Tb-o">2 similar flights</span></div>--><!-- DELETE MAYBE -->
+        </div>
+        <div class="FCS5SWB-d-Tb">
+            <div class="FCS5SWB-d-Rb">2 Stops</div>
+        </div>
+    </div>
+    
+    <div class="FCS5SWB-d-W FCS5SWB-d-Kb FCS5SWB-d-S FCS5SWB-d-Y FCS5SWB-d-cc" iti="2"><span class="FCS5SWB-d-X FCS5SWB-d-s FCS5SWB-d-N" elm="il"><div class="FCS5SWB-d-Ab"><div elm="p"><div class="FCS5SWB-d-zb">$398</div><div class="FCS5SWB-d-Bb">round trip</div></div></div><div class="FCS5SWB-d-bc"><div class="FCS5SWB-d-ic FCS5SWB-d-mc" tooltip="Wi-Fi available on portions of your flight."></div><img class="FCS5SWB-d-i" src="https://www.gstatic.com/flights/airline_logos/35px/B6.png"><div class="FCS5SWB-d-ac"><span class="FCS5SWB-Tb-o">4 similar flights</span></div>
+    <div class="FCS5SWB-d-j nitpick"><span>Beach</span></div>
+    </div>
+    <div class="FCS5SWB-d-Ib">
+        <div class="FCS5SWB-d-D">from 2h 28m</div>
+        <div class="FCS5SWB-d-Hb">from BOS</div>
+        <!-- DELETE MAYBE --><!--<div class="FCS5SWB-d-ac"><span class="FCS5SWB-Tb-o">2 similar flights</span></div>--><!-- DELETE MAYBE -->
+    </div>
+    <div class="FCS5SWB-d-Tb">
+        <div class="FCS5SWB-d-Rb">Nonstop</div>
+    </div>
+    <div class="FCS5SWB-Tb-n">
+        <div class="FCS5SWB-Tb-d"></div>
+    </div>
+    </span>
+    </div>
+
+
+    <div class="FCS5SWB-d-W FCS5SWB-d-Kb FCS5SWB-d-S" iti="60">
+        <div class="FCS5SWB-d-Ab">
+            <div elm="p">
+                <div class="FCS5SWB-d-zb">$779</div>
+                <div class="FCS5SWB-d-Bb">round trip</div>
+            </div>
+        </div>
+        <div class="FCS5SWB-d-bc">
+            <div class="FCS5SWB-d-ic FCS5SWB-d-jc" tooltip="Wi-Fi available on your entire flight."></div><img class="FCS5SWB-d-i" src="https://www.gstatic.com/flights/airline_logos/35px/DL.png">
+            <div class="FCS5SWB-d-ac"><span tooltip="8:21 am on Thursday, August 4, 2016">8:21 am</span> – <span tooltip="11:04 am on Thursday, August 4, 2016">11:04 am</span></div>
+            <div class="FCS5SWB-d-j nitpick"><span>United</span></div>
+            <!-- DELETE MAYBE --><!--<div class="FCS5SWB-d-ac"><span class="FCS5SWB-Tb-o">2 similar flights</span></div>--><!-- DELETE MAYBE -->
+        </div>
+        <div class="FCS5SWB-d-Ib">
+            <div class="FCS5SWB-d-D">1h 24m</div>
+            <div class="FCS5SWB-d-Hb">BOS-JFK</div>
+            <!-- DELETE MAYBE --><!--<div class="FCS5SWB-d-ac"><span class="FCS5SWB-Tb-o">2 similar flights</span></div>--><!-- DELETE MAYBE -->
+        </div>
+        <div class="FCS5SWB-d-Tb">
+            <div class="FCS5SWB-d-Rb">Nonstop</div>
+        </div>
+    </div>
+    
+    
+    
+    
+    <!--<div id="lecontainer">
+        <div id="price_info" class="love-xnac">Similar to this</div>
+        <div id="price_info" class="love-xnac">Similar to that</div>
+        <div id="price_info" class="love-xnac">Similarities abound</div>
+        <div id="price_info" class="love-xnac">Similar flights</div>
+        <div id="price_info" class="time-xnab">9:21am-3:32am</div>
+        <div id="price_info" class="time-xnab">6:05am-7:19am</div>
+        <div id="price_info" class="time-xnab">8:00pm-9:00pm</div>
+        <div id="price_info" class="time-xnab">2:13pm-5:13pm</div>
+    </div>
+
+    <div id="leprices">
+        <div id="bxyzn-mount">$219</div>
+        <div id="bxyzn-mount">$213</div>
+        <div id="bxyzn-mount">$313</div>
+        <div id="bxyzn-mount">$413</div>
+        <div id="bxyzn-mount">$513</div>
+        <div id="bxyzn-mount">$613</div>
+        <div id="bxyzn-mount">$713</div>
+        <div id="bxyzn-mount">$813</div>
+        <div id="bxyzn-mount">hello</div>
+    </div>
+
+    <div id="leairlines">
+        <div>United</div>
+        <div>JetBlue</div>
+        <div>American</div>
+        <div>Delta</div>
+        <div>Virgin America</div>
+        <div>JetBlue</div>
+    </div>-->
+
+    <script>
+        vs_price = $(".FCS5SWB-d-zb");
+        vs_trip_type = $(".FCS5SWB-d-Bb");
+        vs_logo = $(".FCS5SWB-d-i");
+        vs_timestamp = $(".FCS5SWB-d-ac");
+        vs_airline = $(".FCS5SWB-d-j");
+        vs_duration = $(".FCS5SWB-d-D");
+        vs_airport = $(".FCS5SWB-d-Hb");
+        vs_stops = $(".FCS5SWB-d-Rb");
+        vs_test_suite = normalize($(".vs_test_suite").children()).concat($("#80")[0]);
+        vs_orbitz = normalize($(".actualPrice"));
+        
+        var elemLists = [
+            {"type":"vs_price", "list":normalize(vs_price)},
+            {"type":"vs_trip_type", "list":normalize(vs_trip_type)},
+            {"type":"vs_logo", "list":normalize(vs_logo)},
+            {"type":"vs_timestamp", "list":normalize(vs_timestamp)},
+            {"type":"vs_airline", "list":normalize(vs_airline)},
+            {"type":"vs_duration", "list":normalize(vs_duration)},
+            /*{"type":"vs_airport", "list":vs_airport},*/
+            {"type":"vs_stops", "list":normalize(vs_stops)},
+        ];
+        
+        //buildJSON(elemLists);
+        //var anchorGroups = groupByAnchor(elemLists);
+        //var pathGroups = collectPaths(anchorGroups);
+        //[superStructure, globalTypes] = collectSuperStructure(elemLists, anchorGroups);
+        
+        /*function anchorTest(elemsA, elemsB) {
+            var anchorList = [];
+            for(var i = 0; i < elemsA.length; i++) {
+                anchorList.push(elemsA[i]);
+            }
+            
+            var resInd = matchWithAnchor(anchorList, elemsB[2]);
+            console.log(elemsA[resInd]);
+            console.log(elemsB[2]);
+        }*/
+        
+        function nicole(elemList) {
+            var rawElemList = [];
+            for(var i = 0; i < elemList.length; i++) {
+                rawElemList.push(elemList[i]);
+            }
+
+            /*dict = buildDictionary(vs_dict);
+            addWord("pm", dict);
+            addWord("$", dict);
+            addWord("$0", dict);
+            addWord("$1", dict);
+            addWord("$2", dict);
+            addWord("$3", dict);
+            addWord("$4", dict);
+            addWord("$5", dict);
+            addWord("$6", dict);
+            addWord("$7", dict);
+            addWord("$8", dict);
+            addWord("$9", dict);
+            addWord("america", dict);
+            addWord("american", dict);*/
+            var elems = $("#leprices").find("*");
+            var prof = profile(rawElemList);
+            return buildSelector(prof);
+        }
+    </script>
+</body>
+
+</html>

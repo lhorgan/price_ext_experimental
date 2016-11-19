@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>VS IFRAME</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="../scripts/jquery.js"></script>
+    <script src="../scripts/bootstrap.js"></script>
+    <script src="../scripts/known_site.js"></script>
+</head>
+
+<body style="background-color: transparent;">
+
+    <div class="container">
+        <div class="modal fade" id="vs_modal" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Volunteer Science recognizes this site!  Would you like to see how your results stack up?</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Volunteer Science can scrape the data on this page and show you how your results compare with those served to a "generic" user.  If you click SURE, data from this page
+                        will be sent to our servers for analysis, and you will see the results immediately.  If you want us to stop asking, click NEVER.  Remember, you can always re-enable this site
+                        by clicking on the plugin icon!</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" id="sureButton" data-dismiss="modal">Sure</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal fade" id="vs_modal_survey" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Tell us more about you!</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Our researchers want to understand how price discrimination affects different groups.  By taking this survey, you are helping real data scientists decipher the tactics companies use to target customers.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" id="sureButtonSurvey">Sure</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+</html>

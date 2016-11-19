@@ -1,0 +1,81 @@
+<html>
+    
+    <head>
+        
+        <style>
+            #vs_overlay_screen {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color:orange;
+                border:0px;
+                opacity: 0.5;
+                z-index: 500;
+            }
+            #vs_overlay_body {
+                position: absolute;
+                z-index: 501;
+            }
+            
+            #vs_spinner {
+                animation-name: rotate; 
+                animation-duration: 3s; 
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+            }
+
+            @keyframes rotate {
+                from {transform: rotate(0deg);}
+                to {transform: rotate(360deg);}
+            }
+        </style>
+        
+        <script src="../scripts/jquery.js"></script>
+        
+    </head>
+    
+    <script>
+        window.onresize = function() {
+           centerOverlayBody(); 
+        };
+        
+        /*function centerOverlayBody() {
+            var bodyWidth = $("body").width();
+            var bodyHeight = $("body").height();
+            var overlayBodyWidth = $("#vs_overlay_body").width();
+            var overlayBodyHeight = $("#vs_overlay_body").width();;
+            
+            var overlayBodyX = (bodyWidth - overlayBodyWidth) / 2;
+            var overlayBodyY = (bodyHeight - overlayBodyHeight) / 2;
+            
+            //$("#vs_overlay_body").css("left", overlayBodyX);
+            //$("#vs_overlay_body").css("top", overlayBodyY);
+            $("#vs_overlay_body").offset({ top: 0, left: $(window).scrollTop() });
+        }*/
+        
+        function centerOverlayBody() {
+            centerX = (window.innerWidth / 2) + $(window).scrollLeft();
+            centerY = (window.innerHeight / 2) + $(window).scrollTop();
+            overlayBodyWidth = $("#vs_overlay_body").width();
+            overlayBodyHeight = $("#vs_overlay_body").height();
+
+            $("#vs_overlay_body").offset({"left": centerX - (overlayBodyWidth / 2), "top": centerY - (overlayBodyHeight / 2)});
+        }
+    </script>
+    
+    <body style="height:5000px">
+        
+        <script>
+            $("body").css("margin", "0px");
+        </script>
+        
+        <div id="vs_overlay">
+            <div id="vs_overlay_screen"></div>
+            <div id="vs_overlay_body">
+                <div id="vs_spinner"><img src="../images/icon128.png" /></div>
+            </div>
+        </div>
+        
+    </body>
+    
+</html>
